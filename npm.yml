@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'    # HTTP端口
+      - '81:81'    # Nginx Proxy Manager Dashboard端口
+      - '443:443'  # HTTPS端口
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
