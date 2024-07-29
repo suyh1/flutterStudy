@@ -10,3 +10,4 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsencrypt
+      - ./data2:/data2
